@@ -5,8 +5,7 @@ Konventionen: siehe [Dokumentations-Standard](https://github.com/mswiente/coding
 ## Jetzt
 
 - [ ] Platzhalter in `content/` ersetzen: Einleitung, /now, E-Mail und Profile, Impressum-Adresse, Datenschutz prüfen (`grep -r TODO content`) → SPEC-0001
-- [ ] GitHub-Repo anlegen, Pages-Quelle auf „GitHub Actions“ stellen, Custom Domain `mswientek.de` eintragen, HTTPS erzwingen → ADR-0002
-- [ ] DNS für `mswientek.de`: A/AAAA-Records auf GitHub Pages, `www` als CNAME, TXT-Record zur Domain-Verifizierung → ADR-0002
+- [ ] Domain `mswientek.de` im GitHub-Account verifizieren (TXT-Record `_github-pages-challenge-mswiente` bei IONOS) → ADR-0002
 - [ ] 301-Weiterleitung `mswientek.com` → `https://mswientek.de` beim Domain-Anbieter einrichten → ADR-0002
 
 ## Später

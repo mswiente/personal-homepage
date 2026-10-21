@@ -8,7 +8,7 @@ Hugo (extended) is pinned in `mise.toml`; CI uses the same version.
 
 ```sh
 mise install          # installs the pinned Hugo version
-mise exec -- hugo server   # local preview on http://localhost:1313
+mise exec -- hugo server   # local preview on http://localhost:1313 (add -D to include drafts)
 mise exec -- hugo --gc --minify   # production build into public/
 ```
 

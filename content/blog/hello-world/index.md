@@ -3,7 +3,7 @@ title: "Hello, world: why I'm starting to write again"
 date: 2026-10-20
 tags: [Personal]
 summary: "Placeholder: a featured post whose cover image fills the whole card."
-draft: false
+draft: true
 placeholder: true
 featured: true
 ---

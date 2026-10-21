@@ -200,6 +200,8 @@ img { max-width: 100%; height: auto; display: block; }
 .card--featured .card__title a, .card--featured .card__more { color: #fff; }
 .card--featured .card__footer { border-top-color: rgb(255 255 255 / 0.2); color: rgb(255 255 255 / 0.8); }
 
+.empty { color: var(--muted); }
+
 /* Pagination */
 .pager { display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 3rem; color: var(--muted); }
 

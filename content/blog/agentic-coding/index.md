@@ -3,7 +3,7 @@ title: "What changed when I let an agent write most of my code"
 date: 2026-10-14
 tags: [AI]
 summary: "Placeholder: a longer summary to see how cards with more text line up next to shorter ones in the same row of the grid."
-draft: false
+draft: true
 placeholder: true
 ---
 

@@ -3,7 +3,7 @@ title: "Living in a tiling window manager"
 date: 2026-09-05
 tags: [Tools]
 summary: "Placeholder: a post without a long title."
-draft: false
+draft: true
 placeholder: true
 ---
 

@@ -18,7 +18,7 @@ Nicht dazu gehören: Kommentare, Newsletter-Versand, Analytics, Login, Kontaktfo
 ## Anforderungen
 - **R1 Sprache:** Alle Inhalte und Bedienelemente sind auf Englisch (`locale = "en"`).
 - **R2 Seiten:** `/` (Startseite), `/blog/` (alle Beiträge), `/blog/<slug>/` (Beitrag), `/tags/` und `/tags/<tag>/`, `/now/`, `/contact/`, `/search/`, `/impressum/` (Legal notice), `/privacy/`, `/index.xml` (RSS), `/sitemap.xml`, 404-Seite.
-- **R3 Kartenraster:** Startseite, `/blog/` und Tag-Seiten zeigen Beiträge als Karten in einem Raster, neueste zuerst, 12 pro Seite mit Paginierung. Spaltenzahl passt sich der Breite an (bis 4 Spalten bei voller Breite, 1 Spalte auf dem Handy). Eine Karte zeigt: Coverbild (falls vorhanden, 16:10 zugeschnitten), den ersten Tag als Label, Titel, Zusammenfassung (höchstens 220 Zeichen), Fußzeile mit „Read more“ und Datum. Die ganze Karte ist ein Link.
+- **R3 Kartenraster:** Startseite, `/blog/` und Tag-Seiten zeigen Beiträge als Karten in einem Raster, neueste zuerst, 12 pro Seite mit Paginierung. Spaltenzahl passt sich der Breite an (bis 4 Spalten bei voller Breite, 1 Spalte auf dem Handy). Eine Karte zeigt: Coverbild (falls vorhanden, 16:10 zugeschnitten), den ersten Tag als Label, Titel, Zusammenfassung (höchstens 220 Zeichen), Fußzeile mit „Read more“ und Datum. Die ganze Karte ist ein Link. Gibt es keine veröffentlichten Beiträge, steht dort „No posts yet.“
 - **R4 Hervorgehobene Beiträge:** Bei `featured: true` und vorhandenem Coverbild füllt das Bild die ganze Karte, Tag, Titel und Fußzeile liegen auf einem dunklen Verlauf; die Zusammenfassung entfällt.
 - **R5 Beiträge:** Page Bundle `content/blog/<slug>/index.md` mit `title`, `date`, `tags`, `summary`, optional `featured`, `cover` (Dateiname, sonst `cover.*`) und `coverAlt`. Die Beitragsseite zeigt Tags, Titel, Datum, Lesezeit, Coverbild, Inhalt und Links zum neueren/älteren Beitrag.
 - **R6 Startseite:** Kurzer Einleitungstext (`content/_index.md`) über dem Kartenraster.
@@ -46,4 +46,4 @@ Nicht dazu gehören: Kommentare, Newsletter-Versand, Analytics, Login, Kontaktfo
 - Einleitungstext, E-Mail-Adresse, Profile und Impressumsangaben stehen noch als Platzhalter in `content/` (mit `TODO` markiert).
 
 ## Geplant
-- Platzhalter-Beiträge (Front Matter `placeholder: true`) durch echte Beiträge ersetzen → Backlog.
+- Platzhalter-Beiträge (Front Matter `placeholder: true`, `draft: true`) durch echte Beiträge ersetzen; lokal sichtbar mit `hugo server -D` → Backlog.

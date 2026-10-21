@@ -3,7 +3,7 @@ title: "Reading notes, summer 2026"
 date: 2026-08-18
 tags: [Books]
 summary: "Placeholder: a post without a cover image, to check the text-only card."
-draft: false
+draft: true
 placeholder: true
 ---
 

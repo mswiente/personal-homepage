@@ -3,7 +3,7 @@ title: "What a year of training data told me"
 date: 2026-09-21
 tags: [Running]
 summary: "Placeholder: notes on what the numbers said and what they didn't."
-draft: false
+draft: true
 placeholder: true
 ---
 

@@ -3,7 +3,7 @@ title: "Static sites are boring, and that's the point"
 date: 2026-10-02
 tags: [Web]
 summary: "Placeholder: short summary."
-draft: false
+draft: true
 placeholder: true
 ---
 

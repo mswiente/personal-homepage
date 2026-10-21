@@ -3,7 +3,7 @@ title: "Specs that stay true: living documentation"
 date: 2026-07-30
 tags: [Software]
 summary: "Placeholder: how I keep specs and decisions next to the code."
-draft: false
+draft: true
 placeholder: true
 ---
 

@@ -1,0 +1,47 @@
+baseURL = "https://mswientek.de/"
+locale = "en"
+title = "Martin Swientek"
+copyright = "Martin Swientek"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 12
+
+[outputs]
+  home = ["html", "rss", "json"]
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  description = "Martin Swientek's personal website and blog."
+  author = "Martin Swientek"
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[markup.highlight]
+  noClasses = false
+  style = "github"
+
+[menus]
+  [[menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 10
+  [[menus.main]]
+    name = "Now"
+    pageRef = "/now"
+    weight = 20
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 30
+  [[menus.footer]]
+    name = "Legal notice"
+    pageRef = "/impressum"
+    weight = 10
+  [[menus.footer]]
+    name = "Privacy"
+    pageRef = "/privacy"
+    weight = 20

@@ -1,0 +1,7 @@
+{{ define "main" }}
+<section class="intro">
+  {{ .Content }}
+</section>
+{{- $posts := where site.RegularPages "Section" "blog" }}
+{{- partial "card-grid.html" (.Paginate $posts) }}
+{{ end }}

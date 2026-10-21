@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post__header">
+    {{- with .GetTerms "tags" }}
+    <p class="post__tags">
+      {{- range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+    </p>
+    {{- end }}
+    <h1>{{ .Title }}</h1>
+    <p class="meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      · {{ .ReadingTime }} min read
+    </p>
+  </header>
+  {{- with partial "cover.html" . }}
+  {{- $img := .Fill "1600x800 Center webp" }}
+  <img class="post__cover" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $.Params.coverAlt }}">
+  {{- end }}
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <nav class="post__nav" aria-label="More posts">
+    {{- with .NextInSection }}<a href="{{ .RelPermalink }}" rel="prev"><span>Newer</span>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{- with .PrevInSection }}<a href="{{ .RelPermalink }}" rel="next"><span>Older</span>{{ .Title }}</a>{{ end }}
+  </nav>
+</article>
+{{ end }}

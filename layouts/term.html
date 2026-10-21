@@ -1,0 +1,7 @@
+{{ define "main" }}
+<header class="page-header">
+  <p class="page-header__kicker"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>
+  <h1>{{ .Title }}</h1>
+</header>
+{{- partial "card-grid.html" .Paginator }}
+{{ end }}

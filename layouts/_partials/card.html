@@ -1,0 +1,21 @@
+{{- $cover := partial "cover.html" . }}
+{{- $featured := and .Params.featured $cover }}
+<article class="card{{ if $featured }} card--featured{{ end }}">
+  {{- with $cover }}
+  {{- $img := .Fill "720x450 Center webp" }}
+  <img class="card__image" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" loading="lazy">
+  {{- end }}
+  <div class="card__body">
+    {{- with index (.GetTerms "tags") 0 }}
+    <span class="card__tag">{{ .LinkTitle }}</span>
+    {{- end }}
+    <h2 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{- if not $featured }}
+    <p class="card__summary">{{ .Summary | plainify | strings.Truncate 220 }}</p>
+    {{- end }}
+  </div>
+  <footer class="card__footer">
+    <span class="card__more" aria-hidden="true">Read more</span>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+  </footer>
+</article>

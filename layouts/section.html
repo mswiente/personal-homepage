@@ -1,0 +1,7 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="page-header__lead">{{ . }}</div>{{ end }}
+</header>
+{{- partial "card-grid.html" .Paginator }}
+{{ end }}

@@ -1,0 +1,18 @@
+{{- /* Search index for /search/, see assets/js/search.js. */ -}}
+{{- $posts := slice }}
+{{- range where site.RegularPages "Section" "blog" }}
+  {{- $img := "" }}
+  {{- with partial "cover.html" . }}{{ $img = (.Fill "720x450 Center webp").RelPermalink }}{{ end }}
+  {{- $tags := slice }}
+  {{- range .GetTerms "tags" }}{{ $tags = $tags | append .LinkTitle }}{{ end }}
+  {{- $posts = $posts | append (dict
+    "title" .Title
+    "url" .RelPermalink
+    "date" (.Date.Format "2 Jan 2006")
+    "datetime" (.Date.Format "2006-01-02")
+    "tags" $tags
+    "summary" (.Summary | plainify | htmlUnescape | strings.Truncate 220)
+    "image" $img
+  ) }}
+{{- end }}
+{{- $posts | jsonify }}

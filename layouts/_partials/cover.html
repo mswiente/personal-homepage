@@ -1,0 +1,8 @@
+{{- /* Returns the page's cover image: the bundle resource named in front matter `cover`, or the first resource matching cover.*. */ -}}
+{{- $cover := "" }}
+{{- with .Params.cover }}
+  {{- $cover = $.Resources.Get . }}
+{{- else }}
+  {{- $cover = .Resources.GetMatch "cover.*" }}
+{{- end }}
+{{- return $cover }}

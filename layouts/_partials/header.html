@@ -1,0 +1,14 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <nav class="site-nav" aria-label="Main">
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+      <a class="site-nav__icon" href="{{ relURL "search/" }}" aria-label="Search" title="Search">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>

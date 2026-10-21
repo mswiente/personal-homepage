@@ -1,0 +1,13 @@
+{{- $pager := . }}
+<div class="card-grid">
+  {{- range $pager.Pages }}
+  {{- partial "card.html" . }}
+  {{- end }}
+</div>
+{{- if gt $pager.TotalPages 1 }}
+<nav class="pager" aria-label="Pagination">
+  {{- with $pager.Prev }}<a href="{{ .URL }}" rel="prev">← Newer</a>{{ end }}
+  <span>Page {{ $pager.PageNumber }} of {{ $pager.TotalPages }}</span>
+  {{- with $pager.Next }}<a href="{{ .URL }}" rel="next">Older →</a>{{ end }}
+</nav>
+{{- end }}
